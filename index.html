@@ -93,6 +93,10 @@
             calculation += ') ';
             showCalculation();
         ">)</button>
+        <button class="js-powerof" onclick="
+            calculation += '**';
+            showCalculation();
+        ">^</button>
     </p>
     <p>
         <button class="js-clear" onclick="
@@ -144,10 +148,12 @@
                 document.querySelector(`.js-par-close`).click();
             } else if (event.key === `Enter`) {
                 document.querySelector(`.js-equal`).click();
+            } else if (event.key === `^`) {
+                document.querySelector(`.js-powerof`).click();
             } else if (event.key === `Backspace`) {
                 calculation = calculation.slice(0, -1);
                 showCalculation();
-            }
+            } 
         }
 
     </script>
