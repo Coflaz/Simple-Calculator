@@ -24,6 +24,7 @@ A simple HTML calculator that allows users to perform basic arithmetic calculati
 - `.` key: Input decimal point.
 - `(` key: Open parentheses.
 - `)` key: Close parentheses.
+- `^` key: To the power of x.
 - `Backspace` key: Delete the last character from the calculation.
 - `Enter` key: Calculate the result.
 
