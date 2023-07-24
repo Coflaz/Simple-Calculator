@@ -29,8 +29,7 @@ A simple HTML calculator that allows users to perform basic arithmetic calculati
 
 ## Notes
 
-- The calculator utilizes the `eval()` function to calculate the result of the expression stored in the `calculation` variable. While it may work for basic calculations, please be cautious as `eval()` can pose security risks and may lead to unexpected behavior with user inputs.
-- The calculator does not handle division by zero, so dividing by zero will result in an error.
+- The calculator does not handle division by zero, so any number divided by zero result in `infinity`.
 - For better readability and maintainability, consider moving the JavaScript code to a separate file and linking it using the `<script>` tag.
 - The calculator's styling can be customized by modifying the CSS in the `<style>` tag.
 
