@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+
+    </style>
+</head>
+<body onkeydown="
+    eventClicker(event)
+">
+    <p class="js-calculation-window"></p>
+    <p>
+        <button class="js-one" onclick="
+            calculation += '1';
+            showCalculation();
+            ">1</button>
+        <button class="js-two" onclick="
+            calculation += '2';
+            showCalculation();
+        ">2</button>
+        <button class="js-three" onclick="
+            calculation += '3';
+            showCalculation();
+        ">3</button>
+        <button class="js-plus" onclick="
+            calculation += ' + ';
+            showCalculation();
+        ">+</button>
+    </p>
+    <p>
+        <button class="js-four" onclick="
+        calculation += '4';
+        showCalculation();
+        ">4</button>
+        <button class="js-five" onclick="
+        calculation += '5';
+        showCalculation();
+        ">5</button>
+        <button class="js-six" onclick="
+        calculation += '6';
+        showCalculation();
+        ">6</button>
+        <button class="js-subtract" onclick="
+        calculation += ' - ';
+        showCalculation();
+        ">-</button>
+    </p>
+    <p>
+        <button class="js-seven" onclick="
+        calculation += '7';
+        showCalculation();
+        ">7</button>
+        <button class="js-eight" onclick="
+        calculation += '8';
+        showCalculation();
+        ">8</button>
+        <button class="js-nine" onclick="
+        calculation += '9';
+        showCalculation();
+        ">9</button>
+        <button class="js-multiply" onclick="
+        calculation += ' * ';
+        showCalculation();
+        ">x</button>
+    </p>
+    <p>
+        <button class="js-zero" onclick="
+        calculation += '0';
+        showCalculation();
+        ">0</button>
+        <button class="js-dot" onclick="
+        calculation += '.';
+        showCalculation();
+        ">.</button>
+        <button class="js-equal" onclick="
+        calculation = eval(calculation);
+        showCalculation();
+        ">=</button>
+        <button class="js-divide" onclick="
+        calculation += ' / ';
+        showCalculation();
+        ">/</button>
+    </p>
+    <p>
+        <button class="js-par-open" onclick="
+            calculation += ' (';
+            showCalculation();
+            ">(</button>
+        <button class="js-par-close" onclick="
+            calculation += ') ';
+            showCalculation();
+        ">)</button>
+    </p>
+    <p>
+        <button class="js-clear" onclick="
+            calculation = '';
+            showCalculation();
+            ">Clear</button>
+    </p>
+
+    <script>
+        let calculation = ``;
+        function showCalculation() {
+            document.querySelector('.js-calculation-window').innerHTML = calculation;
+        }
+
+        function eventClicker(event) {
+            if (event.key === `1`) {
+                document.querySelector(`.js-one`).click();
+            } else if (event.key === `2`) {
+                document.querySelector(`.js-two`).click();
+            } else if (event.key === `3`) {
+                document.querySelector(`.js-three`).click();
+            } else if (event.key === `4`) {
+                document.querySelector(`.js-four`).click();
+            } else if (event.key === `5`) {
+                document.querySelector(`.js-five`).click();
+            } else if (event.key === `6`) {
+                document.querySelector(`.js-six`).click();
+            } else if (event.key === `7`) {
+                document.querySelector(`.js-seven`).click();
+            } else if (event.key === `8`) {
+                document.querySelector(`.js-eight`).click();
+            } else if (event.key === `9`) {
+                document.querySelector(`.js-nine`).click();
+            } else if (event.key === `0`) {
+                document.querySelector(`.js-zero`).click();
+            } else if (event.key === `+`) {
+                document.querySelector(`.js-plus`).click();
+            } else if (event.key === `-`) {
+                document.querySelector(`.js-subtract`).click();
+            } else if (event.key === `*`) {
+                document.querySelector(`.js-multiply`).click();
+            } else if (event.key === `/`) {
+                document.querySelector(`.js-divide`).click();
+            } else if (event.key === `.`) {
+                document.querySelector(`.js-dot`).click();
+            } else if (event.key === `(`) {
+                document.querySelector(`.js-par-open`).click();
+            } else if (event.key === `)`) {
+                document.querySelector(`.js-par-close`).click();
+            } else if (event.key === `Enter`) {
+                document.querySelector(`.js-equal`).click();
+            } else if (event.key === `Backspace`) {
+                calculation = calculation.slice(0, -1);
+                showCalculation();
+            }
+        }
+
+    </script>
+</body>
+</html>
